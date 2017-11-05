@@ -45,6 +45,7 @@ nav#mainNav {
 section#cover {
     margin-top: -110px;
     height: 590px;
+    min-height: 100vh;
     background: #3c4982; /* Old browsers */
     background: -moz-linear-gradient(top, #3c4982 0%, #2e8dc2 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #3c4982 0%,#2e8dc2 100%); /* Chrome10-25,Safari5.1-6 */
@@ -60,7 +61,7 @@ section#cover {
     font-size: 28px;
     font-weight: 300!important;
     text-align: center;
-    margin-top: 140px;
+    margin-top: 200px;
     margin-bottom: 30px;
 }
 
@@ -73,14 +74,42 @@ section#cover {
     color: #fefefe;
     font-size: 16px;
     border: 1px solid #fefefe;
+    transition: 0.8s;
 }
 
 .cover-button:hover {
     text-decoration: none;
-    background:#2e8dc2;
-    opacity: 0.5;
+    background:#fefefe;
     cursor: pointer;
-    color: #fefefe;
+    color: #3c4982;
+}
+
+.cover-logo{
+  height: 150px;
+  width: 150px;
+}
+
+.cover-header{
+  font-weight: 300;
+}
+
+.cover-scroll{
+  font-size: 12px;
+  width: 100%;
+  color: #fefefe;
+  text-align: center;
+  position: absolute;
+  text-transform: uppercase;
+  top: 90vh;
+}
+
+.cover-scroll blue{
+  color: #3c4982;
+}
+
+.scroll-icon{
+  height: 25px;
+  width: 25px;
 }
 
 /* About */
