@@ -1,28 +1,119 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&subset=latin-ext');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Menu */
+nav#mainNav {
+    background: transparent;
+    padding: 15px;
+}
+
+.mainNav-heading {
+    font-size: 20px;
+    color: #fefefe;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+}
+
+.mainNav-heading:hover {
+    color: #fefefe!important;
+    opacity: 0.7;
+}
+
+.mainNav-heading blue {
+    color: #60b3ff;
+}
+
+.mainNav-links li a {
+    font-size: 14px;
+    color:#fefefe;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+}
+
+.mainNav-links li a:hover {
+    background: transparent!important;
+    opacity: 0.3;
+}
+
+/* Cover */
+section#cover {
+    margin-top: -110px;
+    height: 590px;
+    background: #3c4982; /* Old browsers */
+    background: -moz-linear-gradient(top, #3c4982 0%, #2e8dc2 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #3c4982 0%,#2e8dc2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #3c4982 0%,#2e8dc2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c4982', endColorstr='#2e8dc2',GradientType=0 );
+    text-align: center;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.cover-text {
+    color: #fefefe;
+    font-family: 'Lato', sans-serif;
+    font-size: 28px;
+    font-weight: 300!important;
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 30px;
+}
+
+.cover-button {
+    display: inline-block;
+    margin: 0 auto!important;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fefefe;
+    font-size: 16px;
+    border: 1px solid #fefefe;
+}
+
+.cover-button:hover {
+    text-decoration: none;
+    background:#2e8dc2;
+    opacity: 0.5;
+    cursor: pointer;
+    color: #fefefe;
+}
+
+/* About */
+section#about {
+  padding: 60px 0;
+}
+
+.about-heading {
   text-align: center;
+  color:#2e8dc2;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.about-paragraph {
+  display: block;
+  font-size: 14px;
+  color: #5d5d5d;
+  text-align: center;
+  line-height: 24px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+/* Footer */
+section#footer {
+  padding: 60px 0;
+  border-top: 1px solid #d5d5d5;
 }
 
-.App-title {
-  font-size: 1.5em;
+.footer-right {
+  float: right;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.footer-right a {
+  margin-left: 30px;
 }
