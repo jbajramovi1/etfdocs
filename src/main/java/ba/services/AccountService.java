@@ -1,6 +1,6 @@
-package services;
+package ba.services;
 
-import models.Account;
+import ba.models.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import repositories.AccountRepository;
+import ba.repositories.AccountRepository;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -22,8 +22,13 @@ import java.util.Collection;
 @Service
 public class AccountService implements UserDetailsService {
 
-    @Autowired
+
     AccountRepository repository;
+
+    @Autowired
+    void setRepository(AccountRepository accountRepository){
+        this.repository=accountRepository;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String data) throws UsernameNotFoundException {

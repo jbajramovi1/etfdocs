@@ -1,6 +1,6 @@
-package repositories;
+package ba.repositories;
 
-import models.Account;
+import ba.models.Account;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;

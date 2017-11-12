@@ -1,13 +1,13 @@
-package controllers;
+package ba.controllers;
 
-import models.Account;
+import ba.models.Account;
 import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import services.AccountService;
+import ba.services.AccountService;
 
 @RestController
 @CrossOrigin
