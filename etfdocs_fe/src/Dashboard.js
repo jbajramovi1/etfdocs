@@ -1,30 +1,27 @@
 import React, { Component } from 'react';
-import { mustNotAuthenticate } from './_services/Sessions';
+import { mustAuthenticate } from './_services/Sessions';
 
 import './App.css';
 
-import Menu from './common/Menu';
 import Footer from './common/Footer';
 
-import Form from './register/Form';
-
-class Register extends Component {
+class Dashboard extends Component {
   constructor() {
     super();
   }
 
   componentWillMount() {
-    mustNotAuthenticate();
+      mustAuthenticate();
   }
 
   render () {
     return (
       <div>
-        <Form />
+        <h1>Dashboard</h1>
         <Footer />
       </div>
     );
   }
 };
 
-export default Register;
+export default Dashboard;

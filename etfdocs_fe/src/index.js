@@ -9,6 +9,7 @@ import Menu from './common/Menu';
 import App from './App';
 import Login from './Login';
 import Register from './Register';
+import Dashboard from './Dashboard';
 
 /* Render + router */
 ReactDOM.render (
@@ -18,6 +19,7 @@ ReactDOM.render (
             <Route exact path="/" component={App}/>
             <Route path="/login" component={Login}/>
             <Route path="/register" component={Register}/>
+            <Route path="/dashboard" component={Dashboard}/>
         </div>
     </BrowserRouter>, 
     document.getElementById('root')

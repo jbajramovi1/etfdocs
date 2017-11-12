@@ -15,14 +15,16 @@ class Form extends Component {
         this.onChange = this.onChange.bind(this);
     }
 
-    register () {
+    // Registration handler
+    register (event) {
+        event.preventDefault();
         // E-mail regex 
         let emre = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if(emre.test(this.state.email)) {
              if(this.state.password == this.state.repPassword) {
                 PostData('register', this.state).then((result) => {
-                    let responseJson = result;
-                    alert(result);
+                    alert('Successfully registred!');
+                    window.location = '/login';
                 });
              } else alert('Not the same password');
         } else alert('Invalid e-mail format.');
@@ -44,18 +46,20 @@ class Form extends Component {
                             <div className="login-form">
                                 <div className="form-group">
                                     <lable for="email">E-mail:</lable>
-                                    <input type="email" className="form-control login-form__input" name="email" placeholder="E-mail" />
+                                    <input type="email" className="form-control login-form__input" name="email" placeholder="E-mail" onChange={this.onChange}/>
                                 </div>
                                 <div className="form-group">
                                     <lable for="password">Password:</lable>
-                                    <input type="password" className="form-control login-form__input" name="password" placeholder="Password" />
+                                    <input type="password" className="form-control login-form__input" name="password" placeholder="Password" onChange={this.onChange}/>
                                 </div>
                                 <div className="form-group">
                                     <lable for="password">Repeat password:</lable>
-                                    <input type="password" className="form-control login-form__input" name="repeat_password" placeholder="Password" />
+                                    <input type="password" className="form-control login-form__input" name="repPassword" placeholder="Password" onChange={this.onChange}/>
                                 </div>
 
-                                <input className="cover-button login-button" name="register" value="Create account" />
+                                <button type="submit" className="cover-button login-button" name="register" onClick={this.register}>
+                                    Create account
+                                </button>
                             </div>
                         </form>
                     </div>
