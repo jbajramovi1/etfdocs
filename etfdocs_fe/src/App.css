@@ -146,3 +146,32 @@ section#footer {
 .footer-right a {
   margin-left: 30px;
 }
+
+/* Login form */
+.login-form {
+  margin-top: 30px;
+  text-align: left!important;
+}
+
+.login-form lable {
+  font-size: 18px!important;
+  font-weight: 300;
+  text-align: left;
+  color: #fefefe;
+  margin-bottom: 15px;
+  display: block;
+}
+
+ .login-form__input {
+  padding: 25px!important;
+}
+
+.login-button {
+  width: 100%;
+  background: transparent;
+}
+
+.login-screen {
+  text-align: center;
+  margin-top: 100px;
+}

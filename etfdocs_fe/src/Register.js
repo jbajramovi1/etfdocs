@@ -4,20 +4,17 @@ import './App.css';
 import Menu from './common/Menu';
 import Footer from './common/Footer';
 
-import Cover from './landing/Cover';
-import About from './landing/About';
+import Form from './register/Form';
 
-
-class App extends Component {
+class Register extends Component {
   render () {
     return (
       <div>
-        <Cover />
-        <About />
+        <Form />
         <Footer />
       </div>
     );
   }
 };
 
-export default App;
+export default Register;
