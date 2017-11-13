@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AccountRepository extends PagingAndSortingRepository<Account,Integer> {
-    @Query("SELECT acc FROM account k WHERE email= :data")
-    public Account findByUsername (@Param("data")String data);
+
+    Account findAccountByEmail (String email);
 }

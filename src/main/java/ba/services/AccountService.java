@@ -22,7 +22,7 @@ import java.util.Collection;
 @Service
 public class AccountService implements UserDetailsService {
 
-
+    @Autowired
     AccountRepository repository;
 
     @Autowired
@@ -33,7 +33,7 @@ public class AccountService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String data) throws UsernameNotFoundException {
 
-        Account account = repository.findByUsername(data);
+        Account account = repository.findAccountByEmail(data);
         if(account == null) {
             throw new UsernameNotFoundException("Authentication error occured");
         }
@@ -47,7 +47,7 @@ public class AccountService implements UserDetailsService {
     }
 
     public Account getAccountByEmail(String email) {
-        Account account = repository.findByUsername(email);
+        Account account = repository.findAccountByEmail(email);
         return account;
 
     }
@@ -55,7 +55,7 @@ public class AccountService implements UserDetailsService {
     public ResponseEntity register(Account account) {
         if (account.getEmail()=="")
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Username ne može biti prazno");
-        else if (repository.findByUsername(account.getEmail())!=null)
+        else if (repository.findAccountByEmail(account.getEmail())!=null)
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Username mora biti jedinstven");
         else if (account.getPassword()=="")
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Password ne može biti prazno");
